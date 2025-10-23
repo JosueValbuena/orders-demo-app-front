@@ -6,7 +6,7 @@ interface CardInterface {
     id: string;
     item: string;
     customer_name: string;
-    quanty: number;
+    quantity: number;
     status: 'pending' | 'completed' | 'cancelled';
     created_at: string;
 }
@@ -15,7 +15,7 @@ const Cards = ({
     id,
     item,
     customer_name,
-    quanty,
+    quantity,
     status,
     created_at
 }: CardInterface) => {
@@ -50,7 +50,7 @@ const Cards = ({
                 </div>
                 <div>
                     <p className="text-sm text-gray-400">Cantidad de Items</p>
-                    <p className="text-base font-medium text-gray-100">{quanty}</p>
+                    <p className="text-base font-medium text-gray-100">{quantity}</p>
                 </div>
                 <div>
                     <p className="text-sm text-gray-400">Fecha de Creación</p>

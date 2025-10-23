@@ -16,7 +16,7 @@ const OrdersContainer = ({ data }: HomeTemplateInterface) => {
                         customer_name={order.customer_name}
                         id={order.id}
                         item={order.item}
-                        quanty={order.quanty}
+                        quantity={order.quantity}
                         status={order.status}
                     />
                 ))}

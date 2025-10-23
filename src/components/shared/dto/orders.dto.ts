@@ -5,7 +5,7 @@ export class OrderDTO {
         public readonly id: string,
         public readonly item: string,
         public readonly status: "pending" | "completed" | "cancelled",
-        public readonly quanty: number,
+        public readonly quantity: number,
     ) { };
 
     static response(props: { [key: string]: any }): OrderDTO {
@@ -15,7 +15,7 @@ export class OrderDTO {
             id: props._id || 'No data',
             item: props.item || 'No data',
             status: props.status || 'No data',
-            quanty: props.quanty || 'No data',
+            quantity: props.quantity || 'No data',
         };
         return transformData;
     };

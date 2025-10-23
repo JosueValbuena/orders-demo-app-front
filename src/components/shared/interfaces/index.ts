@@ -14,6 +14,6 @@ export interface OrderInterface {
     customer_name: string;
     id: string;
     item: string;
-    quanty: number;
+    quantity: number;
     status: 'pending' | 'completed' | 'cancelled';
 };

@@ -75,10 +75,10 @@ const OrderDetailTemplate = ({ data, handleDelete, handleEdit }: OrderDetailTemp
                             </Button>
 
                             <div className="flex items-center gap-4">
-                                <p className="text-sm text-gray-400 mb-2">Quanty</p>
+                                <p className="text-sm text-gray-400 mb-2">Quantity</p>
                                 <div className="flex items-center justify-center gap-4 w-12 bg-gray-300 p-2 rounded-2xl">
                                     {/* <Button className="bg-gray-800 font-bold cursor-pointer hover:bg-gray-700">-</Button> */}
-                                    <p className="font-bold">{data.quanty}</p>
+                                    <p className="font-bold">{data.quantity}</p>
                                     {/* <Button className="bg-gray-800 font-bold cursor-pointer hover:bg-gray-700">+</Button> */}
                                 </div>
                             </div>

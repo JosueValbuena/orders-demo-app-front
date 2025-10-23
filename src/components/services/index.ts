@@ -1,7 +1,7 @@
 import { OrderDTO } from "../shared/dto/orders.dto";
 import type { OrderInterface, Orders } from "../shared/interfaces";
 
-const baseUrl: string = 'http://localhost:3001/api/v1/order/';
+const baseUrl: string = 'http://localhost:3001/api/v1/orders/';
 
 export const getOrders = async (page?: number, filter?: { [key: string]: any }): Promise<[string | null, Omit<Orders, 'message'> | null | undefined]> => {
 

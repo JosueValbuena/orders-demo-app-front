@@ -42,7 +42,7 @@ const orderFormSchema = z.object({
         .min(6, "Item required min 6 characters")
         .max(200)
         .regex(safeTextRegex, "Item description contains invalid characters."),
-    quanty: z
+    quantity: z
         .coerce.number()
         .min(1, "Number is required"),
     status: z.enum(["pending", "completed", "cancelled"] as const, {
@@ -85,7 +85,7 @@ const OrderCreate = () => {
         defaultValues: {
             customerName: /* defaultValues?.customerName || */ "",
             item: /* defaultValues?.item || */ "",
-            quanty: 1,
+            quantity: 1,
             status: /* defaultValues?.status || */ "pending",
         },
     });
@@ -104,7 +104,7 @@ const OrderCreate = () => {
                 ...orderData.data,
                 customer_name: values.customerName,
                 item: values.item,
-                quanty: values.quanty,
+                quantity: values.quantity,
                 status: values.status
             };
 
@@ -131,7 +131,7 @@ const OrderCreate = () => {
         const newData = {
             customer_name: values.customerName,
             item: values.item,
-            quanty: values.quanty
+            quantity: values.quantity
         };
 
         try {
@@ -208,7 +208,7 @@ const OrderCreate = () => {
         if (orderData.data) {
             form.setValue('customerName', orderData.data.customer_name);
             form.setValue('item', orderData.data.item);
-            form.setValue('quanty', Number(orderData.data.quanty));
+            form.setValue('quantity', Number(orderData.data.quantity));
             form.setValue('status', orderData.data.status);
         };
 
@@ -270,10 +270,10 @@ const OrderCreate = () => {
 
                             <FormField
                                 control={form.control}
-                                name="quanty"
+                                name="quantity"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>Quanty</FormLabel>
+                                        <FormLabel>Quantity</FormLabel>
                                         <FormControl>
                                             <Input type="number" placeholder="1" {...field} />
                                         </FormControl>
