@@ -15,5 +15,14 @@ export interface OrderInterface {
     id: string;
     item: string;
     quantity: number;
-    status: 'pending' | 'completed' | 'cancelled';
+    status: OrderStatus;
 };
+
+export interface NewOrderInterface {
+    customer_name: string;
+    item: string
+    quantity: number
+    status: OrderStatus;
+};
+
+type OrderStatus = 'pending' | 'completed' | 'cancelled';

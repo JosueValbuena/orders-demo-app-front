@@ -25,7 +25,7 @@ import { Button } from "@/components/ui/button";
 import AlertBox from "@/components/organism/alertsBox/AlertsBox";
 import { createOrder, editOrderByID, getOrderByID } from "@/components/services";
 import { useEffect, useState } from "react";
-import type { OrderInterface } from "@/components/shared/interfaces";
+import type { NewOrderInterface, OrderInterface } from "@/components/shared/interfaces";
 import { Spinner } from "@/components/ui/spinner";
 
 const safeTextRegex = /^[a-zA-Z0-9\s.,'-]*$/;
@@ -128,7 +128,7 @@ const OrderCreate = () => {
             return
         };
 
-        const newData = {
+        const newData: NewOrderInterface = {
             customer_name: values.customerName,
             item: values.item,
             quantity: values.quantity,
