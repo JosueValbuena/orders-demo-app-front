@@ -131,7 +131,8 @@ const OrderCreate = () => {
         const newData = {
             customer_name: values.customerName,
             item: values.item,
-            quantity: values.quantity
+            quantity: values.quantity,
+            status: 'pending'
         };
 
         try {

@@ -34,7 +34,7 @@ export const getOrders = async (page?: number, filter?: { [key: string]: any }):
 };
 
 export const getOrderByID = async (id: string): Promise<[string | null, OrderInterface | null | undefined]> => {
-    const response = await fetch(baseUrl + id, {
+    const response = await fetch(`${baseUrl}${id}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -45,6 +45,7 @@ export const getOrderByID = async (id: string): Promise<[string | null, OrderInt
         return ['Error consultando datos', null]
     };
     const data = await response.json();
+    console.log({ data })
     return [null, OrderDTO.response(data.data)]
 };
 

@@ -66,6 +66,7 @@ const OrderDetail = () => {
                 })
 
                 const [error, order] = await getOrderByID(id);
+                console.log({ error, order })
                 setQueryData({
                     data: order ?? null,
                     error: error,

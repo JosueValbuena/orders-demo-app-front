@@ -12,7 +12,7 @@ interface OrderDetailTemplateInterface {
 };
 
 const OrderDetailTemplate = ({ data, handleDelete, handleEdit }: OrderDetailTemplateInterface) => {
-
+    console.log({ data })
     const navigate = useNavigate();
 
     return (
